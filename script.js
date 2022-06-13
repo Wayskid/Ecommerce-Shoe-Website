@@ -10,10 +10,13 @@ const bar3 = document.querySelector(".bar3")
 const cross = document.querySelector(".cross");
 const mobileNavMenu = document.querySelector(".mobileNavMenu");
 const placeImg = document.querySelector(".placeImg");
-const selectShoe = document.querySelectorAll(".selectShoe");
-// const mobileNavMenu = document.querySelector(".mobileNavMenu");
-// const mobileNavMenu = document.querySelector(".mobileNavMenu");
-// const mobileNavMenu = document.querySelector(".mobileNavMenu");
+const selectPic = document.querySelector(".selectPic");
+const selectToView = Array.from(selectPic.children);
+const carousel = document.querySelector(".carousel");
+const trackContainer = document.querySelector(".trackContainer");
+const slide = Array.from(trackContainer.children)
+const btnRight = document.querySelector(".btnRight");
+const btnLeft = document.querySelector(".btnLeft");
 
 
 // const numberTyped = numberToBuy.value
@@ -61,22 +64,60 @@ burger.addEventListener("click", () => {
 })
 
 //Click Picture To view
-for(i = 0; i < selectShoe.length; i++){
+for (let i = 0; i < selectToView.length; i++) {
 
-selectShoe[i].addEventListener("click", (e) => {
-    console.log(e.target);
+selectToView[i].addEventListener("click", (e) => {
     placeImg.innerHTML = "";
     var img = document.createElement("img");
     placeImg.appendChild(img)
     img.src = e.target.src
     img.classList = "viewedPic";
-    if(img.src = e.target.src) {
-        e.target.classList.add("eTargetClass")
-        e.target.nextElementSibling.classList.remove("eTargetClass");
-        e.target.previousElementSibling.classList.remove("eTargetClass");
+
+    var el = selectToView[0];
+
+    while(el){
+        if(el.tagName === "IMG"){
+            el.classList.remove("eTargetClass")
+        }
+        el = el.nextSibling;
     }
+
+    e.target.classList.add("eTargetClass")
 })
 };
+
+
+//Carousel
+
+//Right Button Switch
+
+
+btnRight.addEventListener("click", () => {
+const activeSlide = document.querySelector(".activeSlide");
+activeSlide.previousElementSibling.classList.add("activeSlide");
+activeSlide.classList.remove("activeSlide");
+if (slide[0].classList.contains("activeSlide")) {
+    btnRight.classList.add("hideArrow");
+}
+else if(slide[2].classList.contains("activeSlide")){
+    btnLeft.classList.remove("hideArrow");
+}
+});
+
+//Left Button Switch
+btnLeft.addEventListener("click", () => {
+    const activeSlide = document.querySelector(".activeSlide");
+
+    activeSlide.nextElementSibling.classList.add("activeSlide");
+    activeSlide.classList.remove("activeSlide");
+
+    if (slide[slide.length-1].classList.contains("activeSlide")) {
+        btnLeft.classList.add("hideArrow");
+    }
+    else if(slide[1].classList.contains("activeSlide")){
+        btnRight.classList.remove("hideArrow");
+    }
+});
 
 
 //Add remaining Items
