@@ -321,12 +321,10 @@ input[type="submit"]{
     .navLinksList{
         display: flex;
         margin-left: 4rem;
-        /* gap: 0.5rem; */
         color: gray;
     }
 
     .navLink a{
-        /* width: 4rem; */
         padding: 0.4rem 1rem;
     }
 
@@ -426,7 +424,7 @@ input[type="submit"]{
     }
 
     .mobileNavMenu{
-        display: none;
+        display: none !important;
     }
 
     .carousel{

@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap');
+
+:root{
+    --clr-neutral-100: white;
+    --clr-primary-500: #fe5a1d    ;
+    --clr-neutral-900: black;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+*{
+    list-style: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-areas: "stack";
+    padding-bottom: 2rem;
+}
+
+body>*{
+    grid-area: stack;
+}
+
+.paddingClass{
+    padding-inline: 2rem;
+}
+
+/* Mobile View First */
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding-block: 1.7rem;
+    padding-inline: 2rem;
+}
+
+.burger{
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3{
+    height: 0.2rem;
+    width: 1.2rem;
+    background-color: var(--clr-neutral-900);
+    margin-bottom: 0.2rem;
+    transition: all 1s ease;
+}
+
+.logo{
+    margin-left: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.navLinksList{
+    display: none;
+}
+
+.cartProfile{
+    align-self: center;
+    align-items: center;
+    margin-left: auto;
+    display: flex;
+    gap: 1rem;
+}
+
+.cart{
+    color: var(--clr-primary-500);
+}
+
+
+/*Contact Page*/
+
+.containerBody{
+}
+
+section{
+    margin-top: 2rem;
+    padding-inline: 2rem;
+}
+
+.headerContact{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--clr-primary-500);
+}
+
+.contactWriteup{
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.fillForm{
+    background-color: var(--clr-neutral-100);
+    
+}
+
+
+
+
+
+
+.mobileNavMenu{
+    margin-top: 5rem;
+    background-color: white;
+    height: min-content;
+    padding-inline: 2rem;
+    transform: translateX(-800px);
+    transition: 1.5s ease;
+}
+
+
+.mobileNavLink{
+    text-align: center;
+    border-bottom: 0.5px solid var(--clr-primary-500);
+    margin-block: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.mobileNavLink a{
+    padding: 0.5rem;
+}
+
+.mobileNavLink a:hover{
+    background-color: var(--clr-primary-500);
+    transition: color 0.2s, background-color 1s ease;
+    border-radius: 0.3rem;
+    background-color: var(--clr-primary-500);
+    color: var(--clr-neutral-100);
+}
+
+
+
+@media(min-width: 820px){
+    
+    body{
+        padding-inline: 4rem;
+    }
+
+
+    .navbar{
+        padding-inline: 0rem;
+    }
+
+    .logo{
+        margin-left: 0;
+    }
+
+    .burger{
+        display: none;
+    }
+
+    .navLinksList{
+        display: flex;
+        margin-left: 4rem;
+        color: gray;
+    }
+
+    .navLink a{
+        padding: 0.4rem 1rem;
+    }
+
+    .navLink a:hover{
+        transition: color 0.2s, background-color 1s ease;
+        border-radius: 0.3rem;
+        background-color: var(--clr-primary-500);
+        color: var(--clr-neutral-100);
+    }
+
+    .activePage{
+        transition: color 0.2s, background-color 1s ease;
+        border-radius: 0.3rem;
+        background-color: var(--clr-primary-500);
+        color: var(--clr-neutral-100);
+    }
+
+    .mobileNavMenu{
+        display: none !important;
+    }
+
+    .sectionCont{
+        display: grid;
+        grid-template-columns: 40% 55%;
+        gap: 5%;
+    }
+
+    section{
+        padding-inline: 0;
+    }
+
+    .contactWriteup{
+        text-align: left;
+    }
+
+    .fillForm{
+        background-color: #fe5a1d;
+        width: 100%;
+        height: 90%;
+    }
+ 
+
+}
+
+
+
+/* Js Classes */
+
+/*Click Burger*/
+
+.bar1.cross{
+    transform: rotate(45deg) translateY(9px) translateX(6px);
+    transition: transform 1.5s ease;
+}
+
+.bar2.cross{
+    background-color: var(--clr-primary-500);
+    transform: translateX(56rem);
+    opacity: 0;
+    transition: transform 1.5s, opacity 4s ease;
+}
+
+.bar3.cross{
+    transform: rotate(-45deg) translateY(-3px) translateX(0px);
+    transition: transform 1.5s ease;
+}
+
+
+.mobileNavMenu.showMobileMenu{
+    display: block;
+    transform: translateX(0);
+}

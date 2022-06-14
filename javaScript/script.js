@@ -17,6 +17,8 @@ const trackContainer = document.querySelector(".trackContainer");
 const slide = Array.from(trackContainer.children)
 const btnRight = document.querySelector(".btnRight");
 const btnLeft = document.querySelector(".btnLeft");
+const newPrice = document.querySelector(".newPrice");
+
 
 
 // const numberTyped = numberToBuy.value
@@ -29,8 +31,10 @@ let a = 0;
 
 plus.addEventListener("click", (ev) => {
     ev.preventDefault();
+    if (a < 100) {
     a++;
     numberToBuy.value = a;
+    }
     
 })
 
@@ -44,16 +48,6 @@ minus.addEventListener("click", (ev)=>{
 
 
 
-//Add to Cart
-addToCart.addEventListener("submit", (e) => {
-    if (numberToBuy.value >= 1) {
-        e.preventDefault();
-        console.log(numberToBuy.value);
-    } else {
-        alert("Please select the quantity of item")
-    }
-    
-})
 
 //Click Burger To show Menu
 burger.addEventListener("click", () => {
@@ -63,9 +57,10 @@ burger.addEventListener("click", () => {
     mobileNavMenu.classList.toggle("showMobileMenu");
 })
 
+
+
 //Click Picture To view
 for (let i = 0; i < selectToView.length; i++) {
-
 selectToView[i].addEventListener("click", (e) => {
     placeImg.innerHTML = "";
     var img = document.createElement("img");
@@ -118,6 +113,49 @@ btnLeft.addEventListener("click", () => {
         btnRight.classList.remove("hideArrow");
     }
 });
+
+
+
+
+
+
+//Add to LocalStorage
+addToCart.addEventListener("submit", (e) => {
+    if (numberToBuy.value >= 1) {
+        e.preventDefault();
+
+        //Add Image
+        const IMG = placeImg.firstChild.src;
+        localStorage.setItem("IMAGE", IMG)
+
+        //Add Price
+        const price = newPrice.innerText;
+        localStorage.setItem("PRICE", price);
+
+        //Add Quantity
+        const QTY = numberToBuy.value;
+        localStorage.setItem("QTY", QTY)
+
+        //Add event
+        localStorage.getItem("cartFunc")
+        
+        return;
+
+
+
+    } else {
+        
+
+
+
+    }
+
+    
+    
+})
+
+
+
 
 
 //Add remaining Items
