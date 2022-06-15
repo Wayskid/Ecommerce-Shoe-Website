@@ -76,7 +76,26 @@ body>*{
 
 .cart{
     color: var(--clr-primary-500);
+    position: relative;
 }
+
+.cartCount{
+    opacity: 0;
+    color: var(--clr-neutral-100);
+    background-color: red;
+    font-size: 0.5rem;
+    /* border: 2px solid red; */
+    position: absolute;
+    left: 0;
+    padding: 0.25rem 0.1rem;
+    border-radius: 7px; 
+    top: 0;   
+}
+
+.cartCount.showCartCount{
+    opacity: 1;
+}
+
 
 .viewedPic{
     width: 100%;

@@ -18,6 +18,7 @@ const slide = Array.from(trackContainer.children)
 const btnRight = document.querySelector(".btnRight");
 const btnLeft = document.querySelector(".btnLeft");
 const newPrice = document.querySelector(".newPrice");
+const cartCount = document.querySelector(".cartCount");
 
 
 
@@ -118,15 +119,21 @@ btnLeft.addEventListener("click", () => {
 
 
 
+let count = 0;
 
 //Add to LocalStorage
 addToCart.addEventListener("submit", (e) => {
     if (numberToBuy.value >= 1) {
         e.preventDefault();
 
+        //Cart Count
+        count++;
+        cartCount.innerText = count;
+        cartCount.classList.add("showCartCount");
+
         //Add Image
         const IMG = placeImg.firstChild.src;
-        localStorage.setItem("IMAGE", IMG)
+        localStorage.setItem("IMAGE", IMG);
 
         //Add Price
         const price = newPrice.innerText;
@@ -134,10 +141,13 @@ addToCart.addEventListener("submit", (e) => {
 
         //Add Quantity
         const QTY = numberToBuy.value;
-        localStorage.setItem("QTY", QTY)
+        localStorage.setItem("QTY", QTY);
 
         //Add event
-        localStorage.getItem("cartFunc")
+        localStorage.getItem("cartFunc");
+
+        //reset number to buy to zero
+        numberToBuy.value = "0";
         
         return;
 
