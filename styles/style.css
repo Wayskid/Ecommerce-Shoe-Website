@@ -96,6 +96,9 @@ body>*{
     opacity: 1;
 }
 
+.profileDdWrapper{
+    display: none;
+}
 
 .viewedPic{
     width: 100%;
@@ -327,6 +330,7 @@ input[type="submit"]{
 
     .navbar{
         padding-inline: 0rem;
+        height: 8rem;
     }
 
     .logo{
@@ -354,11 +358,69 @@ input[type="submit"]{
         color: var(--clr-neutral-100);
     }
 
+    .profileNdDd{
+        margin-top: 10.5rem;
+        display: grid;
+        margin-left: -4rem;
+    }
+
+    .profile{
+        margin-left: 4rem;
+    }
+
+    .profileDdWrapper{
+        opacity: 0;
+        display: grid;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 400;
+        background-color: var(--clr-primary-500);
+        border-radius: 5px;
+        width: 6.5rem;
+        padding-block: 0.5rem;
+        z-index: 2;
+        clip-path: polygon(0 10%, 70% 10%, 75% 3%, 80% 10%, 100% 10%, 100% 10%, 0 10%);
+        margin-top: -0.8rem;
+        transition: all 0.5s ease;
+    }
+    
+    .profileDdWrapper.showDropdown{
+        opacity: 1;
+        clip-path: polygon(0 10%, 70% 10%, 75% 3%, 80% 10%, 100% 10%, 100% 100%, 0 100%);
+    }
+
+
+    .profileDropdown{
+        margin-top: 1rem;
+    }
+
+    .profileDdList{
+        color: var(--clr-neutral-100);
+        /* border-block: 1px solid var(--clr-neutral-900); */
+        padding-block: 0.4rem;
+        width: 80%;
+        margin-inline: auto;
+    }
+
+
+
+    .profileDdList a{
+        padding: 0.2rem 1rem;
+    }
+
+    .profileDdList:hover{
+        color: var(--clr-neutral-900);
+        background-color: var(--clr-neutral-100);
+        transition: 0.5s ease;
+    }
+
     section{
         padding: 4rem 4rem;
         display: grid;
         grid-template-columns: 50% 40%;
         gap: 10%;
+        z-index: 0;
+        position: relative;
     }
 
     .rightPurchase{

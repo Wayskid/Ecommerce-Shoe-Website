@@ -19,6 +19,8 @@ const btnRight = document.querySelector(".btnRight");
 const btnLeft = document.querySelector(".btnLeft");
 const newPrice = document.querySelector(".newPrice");
 const cartCount = document.querySelector(".cartCount");
+const profile = document.querySelector(".profile");
+const profileDdWrapper = document.querySelector(".profileDdWrapper");
 
 
 
@@ -162,6 +164,10 @@ addToCart.addEventListener("submit", (e) => {
 
     
     
+})
+
+profile.addEventListener("click", () => {
+    profileDdWrapper.classList.toggle("showDropdown")
 })
 
 
