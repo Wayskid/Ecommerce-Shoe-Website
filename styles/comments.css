@@ -25,7 +25,6 @@ body{
     display: grid;
     grid-template-areas: "stack";
     padding-bottom: 2rem;
-    height: 100vh;
 }
 
 body>*{
@@ -35,12 +34,6 @@ body>*{
 .paddingClass{
     padding-inline: 2rem;
 }
-
-input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-
 
 /* Mobile View First */
 
@@ -108,143 +101,7 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
 }
 
 
-/*Contact Page*/
-
-
-section{
-    margin-top: 3rem;
-    padding-inline: 2rem;
-}
-
-.headerContact{
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--clr-primary-500);
-}
-
-.contactWriteup{
-    font-size: 16px;
-    font-weight: 200;
-    text-align: center;
-    line-height: 1.5rem;
-}
-
-form{
-    margin-top: 2rem;
-    padding-inline: 2rem;
-}
-
-.fillForm{
-    display: grid;
-    gap: 2rem;
-}
-
-.formField{
-    display: grid;
-    grid-template-areas: "stack";
-}
-
-.formField>*{
-    grid-area: stack;
-}
-
-input, textarea{
-    border: 2px solid var(--clr-primary-500);
-    border-radius: 2px;
-    height: 2rem;
-    z-index: 1;
-    padding-left: 1rem;
-    font-size: 16px;
-}
-
-input::placeholder, textarea::placeholder{
-    color: transparent;
-}
-
-label{
-    height: min-content;
-    width: fit-content;
-    margin-left: 1rem;
-    margin-top: 0.25rem;
-    font-weight: 200;
-    pointer-events: none;
-    z-index: 2;
-    transition: 0.8s ease;
-}
-
-input:focus, textarea:focus{
-    font-weight: 200;
-    border-bottom: 2px solid black;
-}
-
-
-textarea:focus + label, input:focus + label,
-textarea:not(:placeholder-shown) + label, input:not(:placeholder-shown) + label{
-    transform: translateY(-0.85rem);
-    font-size: 12px;
-    color: var(--clr-primary-500);
-    background-color: white;
-}
-
-.email, .pNumber, .zipcode{
-    width: min-content;
-}
-
-.flexInput{
-    display: flex ;
-    width: 80%;
-    gap: 0.7rem;
-}
-
-input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-
-.DOBField{
-    display: grid;
-    width: max-content;
-    grid-template-areas: "stack";
-}
-
-.DOBField>*{
-    grid-area: stack;
-}
-
-.day{
-    width: 3rem;
-    padding-left: 0.2rem;
-    text-align: left;
-}
-
-.month{
-    width: 4rem;
-    padding-left: 0.2rem;
-    text-align: left;
-}
-
-
-.year{
-    width: 5rem;
-    padding-left: 0.2rem;
-    text-align: left;
-}
-
-.DOBField label{
-    margin-left: 0.3rem;
-}
-
-.message{
-    height: 10rem;
-    text-align: left;
-    align-content: unset;
-    padding-top: 1rem;
-}
-
-input[type="submit"]{
-    padding-inline: 1rem;
-    width: min-content;
-}
+/*Comments Page*/
 
 
 
@@ -396,27 +253,7 @@ input[type="submit"]{
         display: none !important;
     }
 
-    .sectionCont{
-        display: grid;
-        grid-template-columns: 40% 55%;
-        gap: 5%;
-    }
-
-    section{
-        padding-inline: 0;
-    }
-
-    .contactWriteup{
-        text-align: left;
-    }
-
-    .formSection{
-        margin-top: 4rem;
-    }
-
-    .formSection h3{
-        text-align: center;
-    }
+    
  
 
 }

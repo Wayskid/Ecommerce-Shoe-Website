@@ -20,6 +20,11 @@ burger.addEventListener("click", () => {
     mobileNavMenu.classList.toggle("showMobileMenu");
 })
 
+//profile dropdown
+profile.addEventListener("click", () => {
+    profileDdWrapper.classList.toggle("showDropdown")
+})
+
 
 //Adding to Cart Values
 

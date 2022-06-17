@@ -107,147 +107,160 @@ input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-in
     display: none;
 }
 
-
-/*Contact Page*/
-
-
-section{
-    margin-top: 3rem;
-    padding-inline: 2rem;
+.header{
+    margin: 7rem auto 0.5rem auto;
 }
 
-.headerContact{
-    font-size: 2rem;
-    font-weight: 800;
-    color: var(--clr-primary-500);
-}
-
-.contactWriteup{
-    font-size: 16px;
-    font-weight: 200;
-    text-align: center;
-    line-height: 1.5rem;
-}
-
-form{
-    margin-top: 2rem;
-    padding-inline: 2rem;
-}
-
-.fillForm{
+.loanCalc{
+    background-color: var(--clr-primary-500);
+    width: 80%;
+    padding: 2rem;
+    border-radius: 5px;
+    margin: auto;    
+    height: 60%;
     display: grid;
-    gap: 2rem;
+    grid-template-rows: 50% 50%;
+    border-style: dashed;
+
 }
 
-.formField{
+
+.calcForm{
+    background-color: var(--clr-neutral-100);
     display: grid;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    align-content: center;
+    gap: 0.4rem;
+    padding-block: 1rem;
+}
+
+.calcFormField{
+    display: grid;
+    width: 50%;
+    height: fit-content;
+    margin-inline: auto;
     grid-template-areas: "stack";
 }
 
-.formField>*{
+.calcFormField >*{
     grid-area: stack;
 }
 
-input, textarea{
+.calcFormField input[type="number"]{
+    border-radius: 2px;
+    padding-left: 1rem;
+    font-size: 16px;
+    width: 100%;
     border: 2px solid var(--clr-primary-500);
     border-radius: 2px;
     height: 2rem;
-    z-index: 1;
-    padding-left: 1rem;
-    font-size: 16px;
+    margin-inline: auto;
 }
 
-input::placeholder, textarea::placeholder{
-    color: transparent;
+input[type="number"]:focus{
+    border-bottom: 2px solid var(--clr-neutral-900);
 }
 
-label{
-    height: min-content;
+input[type="submit"]{
+    padding-inline: 4rem;
+    margin-inline: auto;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 2rem;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: var(--clr-primary-500);
+}
+
+input[type="submit"]:hover{
+    transform: scale(1.05);
+}
+
+
+
+.calcFormField label{
     width: fit-content;
-    margin-left: 1rem;
-    margin-top: 0.25rem;
-    font-weight: 200;
+    height: fit-content;
+    margin-left: 0.5rem;
+    width: fit-content;
     pointer-events: none;
-    z-index: 2;
-    transition: 0.8s ease;
-}
-
-input:focus, textarea:focus{
+    margin-left: 0.5rem;
+    font-size: 16px;
     font-weight: 200;
-    border-bottom: 2px solid black;
+    align-self: center;
 }
 
-
-textarea:focus + label, input:focus + label,
-textarea:not(:placeholder-shown) + label, input:not(:placeholder-shown) + label{
-    transform: translateY(-0.85rem);
-    font-size: 12px;
+input[type="number"]:focus + label, input[type="number"]:not(:placeholder-shown) + label{
+    transform: translateY(-0.94rem);
+    font-size: 11px;
     color: var(--clr-primary-500);
     background-color: white;
 }
 
-.email, .pNumber, .zipcode{
-    width: min-content;
+input[type="number"]::placeholder{
+    color: transparent;
 }
 
-.flexInput{
-    display: flex ;
-    width: 80%;
-    gap: 0.7rem;
-}
 
-input[type="number"]::-webkit-outer-spin-button,input[type="number"]::-webkit-inner-spin-button{
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-
-.DOBField{
+.results{
+    clip-path: inset(0 0 100% 0);
+    height: 100%;
+    background-color: var(--clr-neutral-100);
     display: grid;
-    width: max-content;
-    grid-template-areas: "stack";
+    align-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-rows: repeat(3, fit-content);
 }
 
-.DOBField>*{
-    grid-area: stack;
+.results.showResult{
+    clip-path: inset(0 0 0 0);
+    transform: all 1.5s ease;
 }
 
-.day{
-    width: 3rem;
-    padding-left: 0.2rem;
-    text-align: left;
+.mPayment, .totalInt, .totalPay{
+    color: var(--clr-primary-500);
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.month{
-    width: 4rem;
-    padding-left: 0.2rem;
-    text-align: left;
+.flexResult{
+    display: flex;
+    gap: 1rem;
 }
 
-
-.year{
-    width: 5rem;
-    padding-left: 0.2rem;
-    text-align: left;
+.popUp{
+    background-color: var(--clr-neutral-100);
+    width: 50%;
+    height: 20%;
+    margin-inline: auto;
+    margin-block: auto;
+    border: 2px solid var(--clr-primary-500);
+    color: var(--clr-primary-500);
+    text-align: center;
+    /* display: grid; */
+    align-content: center;
 }
 
-.DOBField label{
-    margin-left: 0.3rem;
+.popUp>*{
+    margin-top: 2rem;
 }
 
-.message{
-    height: 10rem;
-    text-align: left;
-    align-content: unset;
-    padding-top: 1rem;
+.popUpBtn{
+    padding-inline: 4rem;
+    margin-inline: auto;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    height: 2rem;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: var(--clr-primary-500);
 }
-
-input[type="submit"]{
-    padding-inline: 1rem;
-    width: min-content;
-}
-
-
-
 
 
 
@@ -396,34 +409,12 @@ input[type="submit"]{
         display: none !important;
     }
 
-    .sectionCont{
-        display: grid;
-        grid-template-columns: 40% 55%;
-        gap: 5%;
-    }
 
-    section{
-        padding-inline: 0;
-    }
 
-    .contactWriteup{
-        text-align: left;
-    }
-
-    .formSection{
-        margin-top: 4rem;
-    }
-
-    .formSection h3{
-        text-align: center;
-    }
- 
 
 }
 
-
-
-/* Js Classes */
+    /* Js Classes */
 
 /*Click Burger*/
 

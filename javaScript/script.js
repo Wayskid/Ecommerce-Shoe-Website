@@ -1,14 +1,17 @@
 
-const minus = document.querySelector(".minus")
-const plus = document.querySelector(".plus")
-const numberToBuy = document.querySelector(".numberToBuy");
-const addToCart = document.querySelector(".addToCart")
 const burger = document.querySelector(".burger")
 const bar1 = document.querySelector(".bar1")
 const bar2 = document.querySelector(".bar2")
 const bar3 = document.querySelector(".bar3")
 const cross = document.querySelector(".cross");
 const mobileNavMenu = document.querySelector(".mobileNavMenu");
+const cartCount = document.querySelector(".cartCount");
+const profile = document.querySelector(".profile");
+const profileDdWrapper = document.querySelector(".profileDdWrapper");
+const minus = document.querySelector(".minus")
+const plus = document.querySelector(".plus")
+const numberToBuy = document.querySelector(".numberToBuy");
+const addToCart = document.querySelector(".addToCart")
 const placeImg = document.querySelector(".placeImg");
 const selectPic = document.querySelector(".selectPic");
 const selectToView = Array.from(selectPic.children);
@@ -18,37 +21,6 @@ const slide = Array.from(trackContainer.children)
 const btnRight = document.querySelector(".btnRight");
 const btnLeft = document.querySelector(".btnLeft");
 const newPrice = document.querySelector(".newPrice");
-const cartCount = document.querySelector(".cartCount");
-const profile = document.querySelector(".profile");
-const profileDdWrapper = document.querySelector(".profileDdWrapper");
-
-
-
-// const numberTyped = numberToBuy.value
-
-
-//Plus and Minus Button
-
-let a = 0;
-
-
-plus.addEventListener("click", (ev) => {
-    ev.preventDefault();
-    if (a < 100) {
-    a++;
-    numberToBuy.value = a;
-    }
-    
-})
-
-minus.addEventListener("click", (ev)=>{
-    ev.preventDefault();
-    if (a > 0) {
-        a--;
-        numberToBuy.value = a;
-    }
-})
-
 
 
 
@@ -59,6 +31,37 @@ burger.addEventListener("click", () => {
     bar3.classList.toggle("cross");
     mobileNavMenu.classList.toggle("showMobileMenu");
 })
+
+//profile dropdown
+profile.addEventListener("click", () => {
+    profileDdWrapper.classList.toggle("showDropdown")
+})
+
+
+
+//Plus and Minus Button
+
+let a = 0;
+
+
+plus.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    if (a < 100) {
+    a++;    
+    numberToBuy.value = a;
+    }
+    
+})    
+
+minus.addEventListener("click", (ev)=>{
+    ev.preventDefault();
+    if (a > 0) {
+        a--;
+        numberToBuy.value = a;
+    }    
+})    
+
+
 
 
 
@@ -127,7 +130,7 @@ let count = 0;
 addToCart.addEventListener("submit", (e) => {
     if (numberToBuy.value >= 1) {
         e.preventDefault();
-
+        
         //Cart Count
         count++;
         cartCount.innerText = count;
@@ -164,10 +167,6 @@ addToCart.addEventListener("submit", (e) => {
 
     
     
-})
-
-profile.addEventListener("click", () => {
-    profileDdWrapper.classList.toggle("showDropdown")
 })
 
 

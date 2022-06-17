@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/loancalc.css" />
+    <title>Loan Calculator</title>
+  </head>
+  <body>
+    <div class="containerbody">
+      <nav class="navbar">
+        <div class="burger">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <a href="../index.html" class="logoHome">
+          <div class="logo">sneakers</div>
+        </a>
+        <ul class="navLinksList">
+          <li class="navLink">
+            <a href="loancalc.html" class="activePage">Calculator</a>
+          </li>
+          <li class="navLink"><a href="#">Men</a></li>
+          <li class="navLink"><a href="#">Women</a></li>
+          <li class="navLink"><a href="comments.html">Comments</a></li>
+          <li class="navLink"><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="cartProfile">
+          <div class="cart">
+            <a href="cart.html" class="checkCart"
+              ><i class="fa-solid fa-cart-shopping fa-lg"
+                ><p class="cartCount">0</p></i
+              ></a
+            >
+          </div>
+          <div class="profileNdDd">
+            <div class="profile">
+              <a href="#" class="viewProfile"
+                ><img src="../img/arteta.png" alt="" srcset=""
+              /></a>
+            </div>
+            <div class="profileDdWrapper">
+              <ul class="profileDropdown">
+                <li class="profileDdList">
+                  <a href="contact.html">Profile</a>
+                </li>
+                <li class="profileDdList"><a href="#">Deposit</a></li>
+                <li class="profileDdList"><a href="#">Gift Card</a></li>
+                <li class="profileDdList"><a href="#">Coupons</a></li>
+                <li class="profileDdList"><a href="#">Sign Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+
+    <h2 class="header">Loan Calculator</h1>
+    <div class="loanCalc">
+      <form action="" class="calcForm">
+        <div class="calcFormField">
+          <input
+            type="number"
+            name="money"
+            class="amtBorrowed"
+            placeholder="hey"
+          />
+          <label for="">Amount</label>
+        </div>
+        <div class="calcFormField">
+          <input type="number" placeholder="hey" name="" class="interest" />
+          <label for="">Interest %</label>
+        </div>
+        <div class="calcFormField">
+          <input type="number" placeholder="hey" name="" class="timePeriod" />
+          <label for="">Years To Pay</label>
+        </div>
+        <input type="submit" value="Calculate" class="calcBtn" />
+      </form>
+
+      <div class="results">
+        <div class="flexResult">
+          <p>Total Payment:</p>
+          <p class="totalPay">444</p>
+        </div>
+        <div class="flexResult">
+          <p>Monthly Payment:</p>
+          <p class="mPayment">444</p>
+        </div>
+        <div class="flexResult">
+          <p>Total Interest:</p>
+          <p class="totalInt">4444</p>
+        </div>
+      </div>
+    </div>
+
+    <ul class="mobileNavMenu">
+      <li class="mobileNavLink"><a href="loancalc.html">Calculator</a></li>
+      <li class="mobileNavLink"><a href="#">Men</a></li>
+      <li class="mobileNavLink"><a href="#">Women</a></li>
+      <li class="mobileNavLink"><a href="comments.html">Comments</a></li>
+      <li class="mobileNavLink"><a href="pages/contact.html">Contact</a></li>
+    </ul>
+
+    <dialog class="popUp">
+      <p>Please insert values to calculate</p>
+      <button class="popUpBtn">OKAY</button>
+    </dialog>
+
+    <script src="../javaScript/loancalc.js"></script>
+  </body>
+</html>
