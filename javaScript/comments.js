@@ -4,6 +4,8 @@ const bar2 = document.querySelector(".bar2")
 const bar3 = document.querySelector(".bar3")
 const cross = document.querySelector(".cross");
 const mobileNavMenu = document.querySelector(".mobileNavMenu");
+const profile = document.querySelector(".profile");
+const profileDdWrapper = document.querySelector(".profileDdWrapper");
 
 
 
@@ -20,3 +22,12 @@ burger.addEventListener("click", () => {
 profile.addEventListener("click", () => {
     profileDdWrapper.classList.toggle("showDropdown")
 })
+
+//Get Passed Items from Contact Page
+
+var passItems = window.location.search;
+// const fName = passItems.get("firstName");
+// const lName = passItems.get("lastName");
+// const message = passItems.get("message");
+
+console.log(passItems);

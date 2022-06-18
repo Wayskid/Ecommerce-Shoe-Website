@@ -7,6 +7,7 @@ const mobileNavMenu = document.querySelector(".mobileNavMenu");
 const cartCount = document.querySelector(".cartCount");
 const profile = document.querySelector(".profile");
 const profileDdWrapper = document.querySelector(".profileDdWrapper");
+const containerbody = document.querySelector(".containerbody");
 
 const amtBorrowed = document.querySelector(".amtBorrowed");
 const interest = document.querySelector(".interest");
@@ -18,6 +19,8 @@ const mPayment = document.querySelector(".mPayment");
 const totalInt = document.querySelector(".totalInt");
 const popUp = document.querySelector(".popUp");
 const popUpBtn = document.querySelector(".popUpBtn");
+const fadeOut = document.querySelector(".fadeOut");
+const loader = document.querySelector(".loader");
 
 
 
@@ -52,15 +55,23 @@ calcBtn.addEventListener("click", (e) => {
         const mthpayment = (amtBorrowedVal * r * calcInterest)/(r-1)
 
     if (isFinite(mthpayment)){
-        totalPay.textContent = (numOfPayments * mthpayment).toFixed(2);
-        mPayment.textContent = mthpayment.toFixed(2);
-        totalInt.textContent = ((numOfPayments * mthpayment) - amtBorrowedVal).toFixed(2);
-        results.classList.add("showResult")
+        loader.classList.add("showLoading")
+        results.classList.remove("showResult")
+        setTimeout(show, 2000)
+        function show() {
+            loader.classList.remove("showLoading")
+            totalPay.textContent = (numOfPayments * mthpayment).toFixed(2);
+            mPayment.textContent = mthpayment.toFixed(2);
+            totalInt.textContent = ((numOfPayments * mthpayment) - amtBorrowedVal).toFixed(2);
+            results.classList.add("showResult");
+        }
     }
     else{
-        popUp.showModal()
+        popUp.classList.add("showPopUp");
+        containerbody.classList.add("fadeMe");
         popUpBtn.addEventListener("click", ()=>{
-            popUp.close();
+            popUp.classList.remove("showPopUp");
+            containerbody.classList.remove("fadeMe");
         })
     }
 });

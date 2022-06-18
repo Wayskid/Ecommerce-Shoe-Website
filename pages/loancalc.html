@@ -55,11 +55,11 @@
           </div>
         </div>
       </nav>
-    </div>
+    
 
 
-    <h2 class="header">Loan Calculator</h1>
-    <div class="loanCalc">
+      <h2 class="header">Loan Calculator</h1>
+      <div class="loanCalc">
       <form action="" class="calcForm">
         <div class="calcFormField">
           <input
@@ -81,21 +81,27 @@
         <input type="submit" value="Calculate" class="calcBtn" />
       </form>
 
-      <div class="results">
-        <div class="flexResult">
-          <p>Total Payment:</p>
-          <p class="totalPay">444</p>
+      <div class="resultLoading">
+        <div class="results">
+          <div class="flexResult">
+            <p>Total Payment:</p>
+            <p class="totalPay">444</p>
+          </div>
+          <div class="flexResult">
+            <p>Monthly Payment:</p>
+            <p class="mPayment">444</p>
+          </div>
+          <div class="flexResult">
+            <p>Total Interest:</p>
+            <p class="totalInt">4444</p>
+          </div>
         </div>
-        <div class="flexResult">
-          <p>Monthly Payment:</p>
-          <p class="mPayment">444</p>
-        </div>
-        <div class="flexResult">
-          <p>Total Interest:</p>
-          <p class="totalInt">4444</p>
-        </div>
+        <div class="loader"><div></div><div></div><div></div><div></div></div>
       </div>
+
     </div>
+
+  
 
     <ul class="mobileNavMenu">
       <li class="mobileNavLink"><a href="loancalc.html">Calculator</a></li>
@@ -105,10 +111,10 @@
       <li class="mobileNavLink"><a href="pages/contact.html">Contact</a></li>
     </ul>
 
-    <dialog class="popUp">
+    <div class="popUp">
       <p>Please insert values to calculate</p>
       <button class="popUpBtn">OKAY</button>
-    </dialog>
+    </div>
 
     <script src="../javaScript/loancalc.js"></script>
   </body>

@@ -103,6 +103,67 @@ body>*{
 
 /*Comments Page*/
 
+.commentSection{
+    margin-inline: auto;
+    margin-top: 3rem;
+    padding: 0.3rem;
+}
+
+.commentList{
+    display: grid;
+    border: 0.3rem solid var(--clr-primary-500);
+    padding: 0.3rem;
+    display: grid;
+    gap: 0.5rem;
+}
+
+.comment{
+    background-color: var(--clr-neutral-100);
+    border: 1px solid #2279fc1a;
+    text-align: center;
+    padding-inline: 0.1rem;
+    height: 9rem;
+    background-color: #2279fc1a;
+    display: grid;
+    grid-template-rows: 0.5fr 4fr 0.1fr;
+}
+
+.details{
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.opinion{
+    font-size: 13px;
+    border: none;
+    border-radius: 1px;
+    background: none;
+    align-self: center;
+    height: 100%;
+    padding-inline: 0.2rem;
+}
+
+.reaction{
+    display: flex;
+}
+
+.dltEdit{
+    margin-left: auto;
+    display: flex;
+    font-size: 14px;
+    gap: 1rem;
+}
+
+.edit{
+    cursor: pointer;
+    color: rgb(3, 185, 3);
+}
+
+.delete{
+    cursor: pointer;
+    color: red;
+}
 
 
 
@@ -253,7 +314,19 @@ body>*{
         display: none !important;
     }
 
-    
+    .commentSection{
+        width: 65%;
+    }
+
+    .details{
+        font-size: 16px;
+
+    }
+
+    .opinion{
+        padding-block: 1rem;
+        font-size: 17px;
+    }
  
 
 }
