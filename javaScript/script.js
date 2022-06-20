@@ -131,10 +131,13 @@ addToCart.addEventListener("submit", (e) => {
     if (numberToBuy.value >= 1) {
         e.preventDefault();
         
+        
         //Cart Count
         count++;
         cartCount.innerText = count;
         cartCount.classList.add("showCartCount");
+
+
 
         //Add Image
         const IMG = placeImg.firstChild.src;
@@ -153,17 +156,22 @@ addToCart.addEventListener("submit", (e) => {
 
         //reset number to buy to zero
         numberToBuy.value = "0";
-        
-        return;
 
 
 
-    } else {
-        
 
+        //Cart Count
+        count++;
+        cartCount.innerText = count;
+        cartCount.classList.add("showCartCount");
 
 
     }
+        
+            
+            
+            
+        
 
     
     

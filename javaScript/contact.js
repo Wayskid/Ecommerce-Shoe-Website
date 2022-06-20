@@ -7,7 +7,6 @@ const mobileNavMenu = document.querySelector(".mobileNavMenu");
 const profile = document.querySelector(".profile");
 const profileDdWrapper = document.querySelector(".profileDdWrapper");
 const submit = document.querySelector(".submit");
-const fName = document.querySelector(".fName");
 const lName = document.querySelector(".lName");
 const message = document.querySelector(".message");
 
@@ -30,13 +29,15 @@ profile.addEventListener("click", () => {
 
 //Passing Inputs to Comments Page
 
-// submit.addEventListener("click" , (e)=>{
-//     e.preventDefault();
 
-//     var passItems = new URLSearchParams;
-//     passItems.append = ("fName", fName.value)
-//     passItems.append = ("lName", lName.value)
-//     passItems.append = ("message", message.value)
-//     location.href = "../pages/comments.html" + passItems.toString();
 
+// submit.addEventListener("click", (e)=>{
+    // e.preventDefault();
+    // let url = new URL(window.location.href)
+    // url = "../pages/comments.html"
+    // const fName = document.querySelector(".fName");
+    // var params =  new URLSearchParams()
+    // params.append("fName", fName.value)
+
+    // location.href = "../pages/comments.html";
 // })

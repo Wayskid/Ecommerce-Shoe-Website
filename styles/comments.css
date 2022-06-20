@@ -128,10 +128,34 @@ body>*{
     grid-template-rows: 0.5fr 4fr 0.1fr;
 }
 
-.details{
-    text-align: left;
+.detailsLikesCount{
+    /* text-align: left; */
     font-size: 14px;
     font-weight: bold;
+    display: flex;
+    padding-inline: 0.5rem;
+}
+
+.likesCount{
+    font-size: 12px;
+    margin-left: auto;
+    font-weight: 200;
+}
+
+.blinkAnime{
+    animation: blink 0.4s linear;
+}
+
+@keyframes blink{
+    from{
+        transform: scale(1);
+        color: black;
+    }
+    to{
+        transform: scale(1.2);
+        color: var(--clr-primary-500);
+        font-weight: 900;
+    }
 }
 
 .opinion{
@@ -144,8 +168,25 @@ body>*{
     padding-inline: 0.2rem;
 }
 
+.opinion:focus{
+    transform: scale(1.01);
+    background-color: #ff440032;
+}
+
 .reaction{
     display: flex;
+    padding-inline: 0.5rem;
+}
+
+.likeUnlike{
+    display: flex;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.likeUnlike>*{
+    cursor: pointer;
 }
 
 .dltEdit{

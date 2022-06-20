@@ -246,6 +246,14 @@ input[type="submit"]{
     width: min-content;
 }
 
+.footnote{
+    text-align: center;
+    margin-top: 1rem;
+    color: var(--clr-primary-500);
+    font-size: 12px;
+    padding-inline: 1rem;
+}
+
 
 
 
