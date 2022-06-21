@@ -65,49 +65,50 @@
         <section class="formSection">
           <h3>Fill out this Form</h3>
           <form class="fillForm" method="get" action="comments.html">
-            <div class="formField">
+            <div class="formField centerField">
               <input required type="text" name="firstName" class="fName" placeholder="hey"/>
               <label  class="fstName" for="Firstname">First Name</label>
             </div>
-            <div class="formField">
+            <div class="formField centerField">
               <input required type="text" name="lastName" class="lName"  placeholder="hey"/>
               <label  for="Lastname">Last Name</label>
             </div>
-            <div class="formField">
+            <div class="formField centerField">
               <input required type="text" name="otherNames" class="oName"  placeholder="hey"/>
               <label  for="Othernames">Other Names</label>
             </div>
-            <div class="formField">
+            <div class="formField centerField">
               <input required type="email" name="email" class="email" placeholder="hey" />
               <label  for="Email">Email</label>
             </div>
-            <div class="formField">
+            <div class="formField centerField">
               <input required type="number" name="pNumber" class="pNumber"  placeholder="hey"/>
               <label  for="pNumber">Phone Number</label>
             </div>
-            <div class="formField">
+            <div class="formField centerField">
               <input required type="text" name="zipcode" class="zipcode"  placeholder="hey"/>
               <label  for="Zipcode">Zipcode</label>
             </div>
 
             <div class="flexInput">
-              <div class="DOBField">
+              <div class="DOBField centerField">
                 <input required type="number" name="day" class="day"  placeholder="hey"/>
                 <label  for="day">Day</label>
               </div>
-              <div class="DOBField">
+              <div class="DOBField centerField">
                 <input required type="number" name="month" class="month"  placeholder="hey"/>
                 <label  for="month" >Month</label>
               </div>
-              <div class="DOBField">
+              <div class="DOBField centerField">
                 <input required type="number" name="year" class="year"  placeholder="hey"/>
                 <label  for="year">Year</label>
               </div>
             </div>
             
-            <div class="formField">
-              <textarea  class="message" placeholder="hey" name="message"></textarea>
-              <label for="Message">Message</label>
+            <div class="formField position">
+              <textarea  class="message" placeholder="hey" name="message" required maxlength="200ch"></textarea>
+              <label for="Message" class="messageLabel">Message</label>
+              <span class="chLength"><span class="chValue">0</span>/180</span>
             </div>
 
 

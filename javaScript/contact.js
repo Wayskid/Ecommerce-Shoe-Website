@@ -9,6 +9,8 @@ const profileDdWrapper = document.querySelector(".profileDdWrapper");
 const submit = document.querySelector(".submit");
 const lName = document.querySelector(".lName");
 const message = document.querySelector(".message");
+const chLength = document.querySelector(".chLength");
+const chValue = document.querySelector(".chValue");
 
 
 
@@ -27,17 +29,21 @@ profile.addEventListener("click", () => {
 })
 
 
-//Passing Inputs to Comments Page
+//TextArea Length
 
+message.addEventListener("keyup", () => {
+    chLength.classList.add("showChL");
 
+    const messageLength = message.value.length;
+    chValue.innerText = messageLength;
 
-// submit.addEventListener("click", (e)=>{
-    // e.preventDefault();
-    // let url = new URL(window.location.href)
-    // url = "../pages/comments.html"
-    // const fName = document.querySelector(".fName");
-    // var params =  new URLSearchParams()
-    // params.append("fName", fName.value)
+    if (messageLength > 180) {
+        chLength.classList.add("chLColor");
+        submit.classList.add("deactivate")
+    }
 
-    // location.href = "../pages/comments.html";
-// })
+    else{
+        chLength.classList.remove("chLColor");
+        submit.classList.remove("deactivate")
+    }
+})
